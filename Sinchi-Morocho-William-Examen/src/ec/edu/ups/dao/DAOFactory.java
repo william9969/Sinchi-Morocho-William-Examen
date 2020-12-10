@@ -1,7 +1,6 @@
 package ec.edu.ups.dao;
 
-import ec.edu.ups.entidades.TelefonosExamen;
-import ec.edu.ups.entidades.UsuarioExamen;
+import ec.edu.ups.entidades.*;
 import ec.edu.ups.jpa.JPADAOFactory;
 
 public abstract class DAOFactory {
@@ -13,6 +12,8 @@ public abstract class DAOFactory {
 	}
 
 	
-	public abstract UsuarioExamen getUsuarioExamen();
-	public abstract TelefonosExamen getTelefonosExamen();
+	public abstract UsuarioExamenDAO getUsuarioExamenDAO();
+	public abstract TelefonosExamenDAO getTelefonosExamenDAO();
+	public abstract OperadoraExamenDAO getOperadoraExamenDAO();
+	public abstract TipoTelfExamenDAO getTipoTelfExamenDAO();
 }

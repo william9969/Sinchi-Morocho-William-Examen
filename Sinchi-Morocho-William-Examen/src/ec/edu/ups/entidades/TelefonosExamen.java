@@ -19,94 +19,71 @@ public class TelefonosExamen implements Serializable {
 	private int idTelefonos;
 	
 	private String numeroTelefono;
-	private String tipoTelefono;
-	private String operadorTelefono;
 	
 	@ManyToOne
 	@JoinColumn
 	private UsuarioExamen usuarioTelExamen;
 	
+	@OneToOne(mappedBy = "telefonoOperadora")
+	private OperadoraExamen operadora;
 	
+	@OneToOne(mappedBy = "telefonoTipo")
+	private TipoTelfExamen tipoTelefono;
 	
 	public TelefonosExamen() {
 		super();
 	}
-	
 
-	public TelefonosExamen(String numeroTelefono, String tipoTelefono, String operadorTelefono) {
+	public TelefonosExamen(String numeroTelefono) {
 		super();
 		this.numeroTelefono = numeroTelefono;
-		this.tipoTelefono = tipoTelefono;
-		this.operadorTelefono = operadorTelefono;
 	}
-
 
 	public int getIdTelefonos() {
 		return idTelefonos;
 	}
 
-
-
 	public void setIdTelefonos(int idTelefonos) {
 		this.idTelefonos = idTelefonos;
 	}
-
-
 
 	public String getNumeroTelefono() {
 		return numeroTelefono;
 	}
 
-
-
 	public void setNumeroTelefono(String numeroTelefono) {
 		this.numeroTelefono = numeroTelefono;
 	}
-
-
-
-	public String getTipoTelefono() {
-		return tipoTelefono;
-	}
-
-
-
-	public void setTipoTelefono(String tipoTelefono) {
-		this.tipoTelefono = tipoTelefono;
-	}
-
-
-
-	public String getOperadorTelefono() {
-		return operadorTelefono;
-	}
-
-
-
-	public void setOperadorTelefono(String operadorTelefono) {
-		this.operadorTelefono = operadorTelefono;
-	}
-
-
 
 	public UsuarioExamen getUsuarioTelExamen() {
 		return usuarioTelExamen;
 	}
 
-
-
 	public void setUsuarioTelExamen(UsuarioExamen usuarioTelExamen) {
 		this.usuarioTelExamen = usuarioTelExamen;
 	}
 
+	public OperadoraExamen getOperadora() {
+		return operadora;
+	}
 
+	public void setOperadora(OperadoraExamen operadora) {
+		this.operadora = operadora;
+	}
+
+	public TipoTelfExamen getTipoTelefono() {
+		return tipoTelefono;
+	}
+
+	public void setTipoTelefono(TipoTelfExamen tipoTelefono) {
+		this.tipoTelefono = tipoTelefono;
+	}
 
 	@Override
 	public int hashCode() {
+	
 		return this.idTelefonos;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -114,9 +91,10 @@ public class TelefonosExamen implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		
-		return this.hashCode()==obj.hashCode();
+		return obj.hashCode() == this.hashCode();
 	}
+	
+	
 	
 	
 	

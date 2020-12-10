@@ -1,25 +1,43 @@
 package ec.edu.ups.jpa;
 
 import ec.edu.ups.dao.DAOFactory;
+import ec.edu.ups.dao.OperadoraExamenDAO;
+import ec.edu.ups.dao.TelefonosExamenDAO;
+import ec.edu.ups.dao.TipoTelfExamenDAO;
+import ec.edu.ups.dao.UsuarioExamenDAO;
+import ec.edu.ups.entidades.OperadoraExamen;
 import ec.edu.ups.entidades.TelefonosExamen;
+import ec.edu.ups.entidades.TipoTelfExamen;
 import ec.edu.ups.entidades.UsuarioExamen;
 
 public class JPADAOFactory extends DAOFactory{
 
-	public JPADAOFactory() {
-		// TODO Auto-generated constructor stub
+	@Override
+	public UsuarioExamenDAO getUsuarioExamenDAO() {
+		// TODO Auto-generated method stub
+		return new JPAUsuaioExamenDAO();
 	}
 
 	@Override
-	public UsuarioExamen getUsuarioExamen() {
+	public TelefonosExamenDAO getTelefonosExamenDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPATelefonosExamenDAO();
 	}
 
 	@Override
-	public TelefonosExamen getTelefonosExamen() {
+	public OperadoraExamenDAO getOperadoraExamenDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPAOperadoraExamenDAO();
 	}
+
+	@Override
+	public TipoTelfExamenDAO getTipoTelfExamenDAO() {
+		// TODO Auto-generated method stub
+		return new JPATipoTelfExamenDAO();
+	}
+
+
+
+	
 
 }

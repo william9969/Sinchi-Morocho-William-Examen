@@ -1,9 +1,11 @@
 package ec.edu.ups.jpa;
 
-public class JPATelefonosExamenDAO {
+import ec.edu.ups.entidades.TelefonosExamen;
+import ec.edu.ups.dao.TelefonosExamenDAO;
+public class JPATelefonosExamenDAO extends JPAGenericDAO<TelefonosExamen, Integer> implements TelefonosExamenDAO{
 
 	public JPATelefonosExamenDAO() {
-		// TODO Auto-generated constructor stub
+		super(TelefonosExamen.class);
 	}
 
 }
