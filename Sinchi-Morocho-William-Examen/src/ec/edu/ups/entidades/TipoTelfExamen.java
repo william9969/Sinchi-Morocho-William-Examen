@@ -20,8 +20,7 @@ public class TipoTelfExamen implements Serializable {
 	
 	private String tipoTelefono;
 	
-	@OneToOne
-	@JoinColumn
+	@OneToOne(mappedBy = "tipTelefonotlf")
 	private TelefonosExamen telefonoTipo;
 
 	public TipoTelfExamen() {

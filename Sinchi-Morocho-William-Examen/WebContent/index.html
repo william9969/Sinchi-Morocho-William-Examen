@@ -5,17 +5,25 @@
 <title>Insert title here</title>
 
 
-	<link rel="stylesheet" type='text/css' href="<%=request.getContextPath()%>/CSS/bootstrap-grid.css" />     
-	<link rel="stylesheet" type='text/css' href="<%=request.getContextPath()%>/CSS/bootstrap.css"/>
-	<link rel="stylesheet" type='text/css' href="<%=request.getContextPath()%>/CSS/style.css"/>
+	<link rel="stylesheet" type='text/css' href="CSS/bootstrap-grid.css" />     
+	<link rel="stylesheet" type='text/css' href="CSS/bootstrap.css"/>
+	<link rel="stylesheet" type='text/css' href="CSS/style.css"/>
 </head>
 <body>
 <nav class="container">
 		<nav class="nav nav-pills flex-column flex-sm-row">
-		  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Inicio</a>
-		  <a class="flex-sm-fill text-sm-center nav-link" href="#">Agregar Usuario</a>
-		  <a class="flex-sm-fill text-sm-center nav-link" href="#">Listar Agenda</a>
-		  <a class="flex-sm-fill text-sm-center nav-link" href="#">Buscar Usuario</a>
+			<a class="flex-sm-fill text-sm-center nav-link" href="index.html">Inicio</a>
+			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+	        <form action="http://localhost:8080/Sinchi-Morocho-William-Examen/EnviarTipYOpe" method="get">
+	        	<button type="submit" class="flex-sm-fill text-sm-center nav-link btn-dark">Agregar Usuario</button>
+	        </form>
+	        <form action="http://localhost:8080/Sinchi-Morocho-William-Examen/EnviarListado" method="get">
+	       		<button type="submit" class="flex-sm-fill text-sm-center nav-link btn-dark">Listar Agenda</button>
+	        </form>
+	        <form action="http://localhost:8080/Sinchi-Morocho-William-Examen/LogOut" method="get">
+	       		<button type="submit" class="flex-sm-fill text-sm-center nav-link btn-dark">Buscar Usuario</button>
+	        </form>
+	        </div>
 		</nav>
 		
 	</nav>
@@ -38,11 +46,10 @@
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
                      <div class="full feature_box">
                          <div class="full icon">
-                            <a href=""><img class="default-block" src="<%=request.getContextPath()%>/Imagenes/empresaIC.png" alt="#" /></a>
-                            <a href=""><img class="default-none" src="<%=request.getContextPath()%>/Imagenes/empresaIC.png" alt="#" /></a>
+                            <a href=""><img class="img-fluid img-thumbnail" src="Imagenes/usuario.png" alt="#" /></a>
                          </div>
                          <div class="full">
-                            <h4>Agregar Usuarios</h4>
+                            <h4>Agregar </h4>
                          </div>
                          <div class="full">
                            <p>Agrega al usuario con sus teléfonos.</p>
@@ -52,11 +59,10 @@
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
                      <div class="full feature_box">
                          <div class="full icon">
-                            <a href=""><img class="default-block" src="<%=request.getContextPath()%>/Imagenes/prodIC.png" alt="#" /></a>
-                            <a href=""><img class="default-none" src="<%=request.getContextPath()%>/Imagenes/prodIC.png" alt="#" /></a>
+                            <a href=""><img class="img-fluid img-thumbnail" src="Imagenes/agenda.png" alt="#" /></a>
                          </div>
                          <div class="full">
-                            <h4>Listar Agenda</h4>
+                            <h4>Listar </h4>
                          </div>
                          <div class="full">
                            <p>Puedes revisar los usuarios con sus numeros.</p>
@@ -66,11 +72,10 @@
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
                      <div class="full feature_box">
                          <div class="full icon">
-                            <a href=""><img class="default-block" src="<%=request.getContextPath()%>/Imagenes/prodIC.png" alt="#" /></a>
-                            <a href=""><img class="default-none" src="<%=request.getContextPath()%>/Imagenes/prodIC.png" alt="#" /></a>
+                            <a href=""><img class="img-fluid img-thumbnail" src="Imagenes/buscar.png" alt="#" /></a>
                          </div>
                          <div class="full">
-                            <h4>Buscar Usuario</h4>
+                            <h4>Buscar </h4>
                          </div>
                          <div class="full">
                            <p>Busca un usuario por numero de Cédula y teléfono.</p>

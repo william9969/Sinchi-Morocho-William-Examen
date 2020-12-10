@@ -22,8 +22,7 @@ public class OperadoraExamen implements Serializable {
 	
 	private String nomOperadora;
 	
-	@OneToOne
-	@JoinColumn
+	@OneToOne(mappedBy = "operadoraTelefono")
 	private TelefonosExamen telefonoOperadora;
 	
 

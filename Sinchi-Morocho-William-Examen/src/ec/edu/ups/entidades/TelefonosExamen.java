@@ -24,11 +24,13 @@ public class TelefonosExamen implements Serializable {
 	@JoinColumn
 	private UsuarioExamen usuarioTelExamen;
 	
-	@OneToOne(mappedBy = "telefonoOperadora")
-	private OperadoraExamen operadora;
+	@OneToOne
+	@JoinColumn
+	private OperadoraExamen operadoraTelefono;
 	
-	@OneToOne(mappedBy = "telefonoTipo")
-	private TipoTelfExamen tipoTelefono;
+	@OneToOne
+	@JoinColumn
+	private TipoTelfExamen tipTelefonotlf;
 	
 	public TelefonosExamen() {
 		super();
@@ -63,20 +65,20 @@ public class TelefonosExamen implements Serializable {
 		this.usuarioTelExamen = usuarioTelExamen;
 	}
 
-	public OperadoraExamen getOperadora() {
-		return operadora;
+	public OperadoraExamen getOperadoraTelefono() {
+		return operadoraTelefono;
 	}
 
-	public void setOperadora(OperadoraExamen operadora) {
-		this.operadora = operadora;
+	public void setOperadoraTelefono(OperadoraExamen operadoraTelefono) {
+		this.operadoraTelefono = operadoraTelefono;
 	}
 
-	public TipoTelfExamen getTipoTelefono() {
-		return tipoTelefono;
+	public TipoTelfExamen getTipoTelefonotlf() {
+		return tipTelefonotlf;
 	}
 
-	public void setTipoTelefono(TipoTelfExamen tipoTelefono) {
-		this.tipoTelefono = tipoTelefono;
+	public void setTipoTelefonotlf(TipoTelfExamen tipoTelefonotlf) {
+		this.tipTelefonotlf = tipoTelefonotlf;
 	}
 
 	@Override
