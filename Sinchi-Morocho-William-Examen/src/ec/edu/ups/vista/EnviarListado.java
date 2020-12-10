@@ -37,6 +37,7 @@ public class EnviarListado extends HttpServlet {
 		List<UsuarioExamen> agendas= DAOFactory.getFactory().getUsuarioExamenDAO().listadeUsuarios();
 		
 		session.setAttribute("agenda", agendas);
+		System.out.println(agendas.get(0).getTelefonos().toString());
 		request.getRequestDispatcher("/listarUsuarios.jsp").forward(request,response);
 	}
 

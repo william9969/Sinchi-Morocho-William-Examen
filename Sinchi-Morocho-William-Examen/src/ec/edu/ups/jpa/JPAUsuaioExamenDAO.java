@@ -12,7 +12,7 @@ public class JPAUsuaioExamenDAO extends JPAGenericDAO<UsuarioExamen, Integer> im
 
 	@Override
 	public List<UsuarioExamen> listadeUsuarios() {
-		String queryFindAgenda="SELECT u FROM UsuarioExamen";
+		String queryFindAgenda="SELECT u FROM UsuarioExamen u";
 		
 		List<UsuarioExamen> agenda =  em.createQuery(queryFindAgenda).getResultList();;
 		em.close();
